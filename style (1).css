@@ -1,0 +1,110 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f7f4; /* Fundo verde bem clarinho */
+    color: #2d3436;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+header h1 {
+    color: #27ae60; /* Verde Nutrição */
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Parte 3 e 4: Organização com DIVs e Layout Flexbox */
+.container-nutricao {
+    display: flex; /* Organiza imagem e lista lado a lado */
+    flex-wrap: wrap; /* Garante responsividade */
+    gap: 50px; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: center; /* Centraliza o conteúdo na página */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Sombra suave */
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza o container */
+    border-left: 8px solid #2ecc71; /* Detalhe lateral em verde */
+}
+
+/* Parte 4: Ajustes de Layout com CSS (Imagem) */
+.imagem-destaque {
+    width: 300px; /* Redução da largura conforme solicitado */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.secao-conteudo {
+    flex: 1; /* Faz a seção de conteúdo ocupar o espaço restante */
+    min-width: 320px;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Parte 2: Estilização com CSS (Listas) */
+.lista-nutrl {
+    margin-bottom: 25px;
+    padding-left: 25px;
+    color: #27ae60; /* Cor de texto verde */
+}
+
+.lista-nutrl li {
+    margin-bottom: 12px; /* Espaçamento entre itens */
+    transition: all 0.3s ease; /* Preparação para o efeito hover */
+    color: #34495e; /* Cor do texto dos itens */
+}
+
+/* Desafio Extra: Marcadores e Efeito Hover */
+ul.lista-nutrl {
+    list-style-type: "🥗 "; /* Marcador personalizado com emoji de salada */
+}
+
+.lista-nutrl li:hover {
+    transform: scale(1.05) translateX(10px); /* Efeito hover: aumenta e move */
+    color: #27ae60;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #95a5a6;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .container-nutricao {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .lista-nutrl {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+}
